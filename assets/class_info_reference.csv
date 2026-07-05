@@ -1,0 +1,89 @@
+﻿Structure,Side,Code,R,G,B,HEX,pixel_value
+Pelvis,Left,lol_01,57,229,81,#45D936,1
+Pelvis,Right,lol_02,36,141,51,#25741D,2
+Femur,Left,lol_03,229,209,57,#D93679,3
+Femur,Right,lol_04,141,128,36,#741D40,4
+Patella,Left,lol_05,152,57,229,#36D9C4,5
+Patella,Right,lol_06,93,36,141,#1D7467,6
+Tibia,Left,lol_07,164,229,57,#D936BB,7
+Tibia,Right,lol_08,101,141,36,#741D63,8
+Fibula,Left,lol_09,57,202,229,#4536D9,9
+Fibula,Right,lol_10,36,124,141,#251D74,10
+Talus,Left,lol_11,63,57,229,#36D954,11
+Talus,Right,lol_12,38,36,141,#1D742C,12
+Calcaneus,Left,lol_13,229,57,219,#D9BB36,13
+Calcaneus,Right,lol_14,141,36,134,#74631D,14
+Navicular,Left,lol_15,229,78,57,#D9368F,15
+Navicular,Right,lol_16,141,48,36,#741D4C,16
+Cuboid,Left,lol_17,111,229,57,#36ACD9,17
+Cuboid,Right,lol_18,67,141,36,#1D5B74,18
+Medial cuneiform,Left,lol_19,57,229,178,#36D93E,19
+Medial cuneiform,Right,lol_20,36,141,108,#1D7421,20
+Intermediate cuneiform,Left,lol_21,229,141,57,#CAD936,21
+Intermediate cuneiform,Right,lol_22,141,86,36,#6B741D,22
+Lateral cuneiform,Left,lol_23,57,151,229,#3680D9,23
+Lateral cuneiform,Right,lol_24,36,92,141,#1D4474,24
+1st Metatarsal,Left,lol_25,229,57,136,#9E36D9,25
+1st Metatarsal,Right,lol_26,141,36,82,#531D74,26
+2nd Metatarsal,Left,lol_27,58,229,57,#36D9AC,27
+2nd Metatarsal,Right,lol_28,36,141,36,#1D745B,28
+3rd Metatarsal,Left,lol_29,57,86,229,#D93663,29
+3rd Metatarsal,Right,lol_30,36,52,141,#741D34,30
+4th Metatarsal,Left,lol_31,197,229,57,#8836D9,31
+4th Metatarsal,Right,lol_32,121,141,36,#481D74,32
+5th Metatarsal,Left,lol_33,229,57,166,#36D997,33
+5th Metatarsal,Right,lol_34,141,36,101,#1D7451,34
+1st Proximal phalanx,Left,lol_35,57,229,153,#363ED9,35
+1st Proximal phalanx,Right,lol_36,36,141,93,#1D2174,36
+2nd Proximal phalanx,Left,lol_37,57,77,229,#B536D9,37
+2nd Proximal phalanx,Right,lol_38,36,47,141,#601D74,38
+3rd Proximal phalanx,Left,lol_39,57,79,229,#D93636,39
+3rd Proximal phalanx,Right,lol_40,36,48,141,#741D1D,40
+4th Proximal phalanx,Left,lol_41,229,57,131,#D9364C,41
+4th Proximal phalanx,Right,lol_42,141,36,79,#741D29,42
+5th Proximal phalanx,Left,lol_43,229,57,142,#3697D9,43
+5th Proximal phalanx,Right,lol_44,141,36,87,#1D5174,44
+2nd Middle phalanx,Left,lol_45,229,181,57,#D94C36,45
+2nd Middle phalanx,Right,lol_46,141,111,36,#74291D,46
+3rd Middle phalanx,Left,lol_47,229,136,57,#88D936,47
+3rd Middle phalanx,Right,lol_48,141,83,36,#48741D,48
+4th Middle phalanx,Left,lol_49,57,229,73,#36D96A,49
+4th Middle phalanx,Right,lol_50,36,141,44,#1D7438,50
+5th Middle phalanx,Left,lol_51,229,57,164,#D936D1,51
+5th Middle phalanx,Right,lol_52,141,36,101,#741D6F,52
+1st Distal phalanx,Left,lol_53,57,229,58,#D98F36,53
+1st Distal phalanx,Right,lol_54,36,141,36,#744C1D,54
+2nd Distal phalanx,Left,lol_55,113,229,57,#D97936,55
+2nd Distal phalanx,Right,lol_56,69,141,36,#74401D,56
+3rd Distal phalanx,Left,lol_57,57,229,138,#5BD936,57
+3rd Distal phalanx,Right,lol_58,36,141,84,#30741D,58
+4th Distal phalanx,Left,lol_59,57,101,229,#5B36D9,59
+4th Distal phalanx,Right,lol_60,36,61,141,#301D74,60
+5th Distal phalanx,Left,lol_61,229,57,211,#D936A6,61
+5th Distal phalanx,Right,lol_62,141,36,129,#741D57,62
+Rectus femoris,Left,lolm_01_01,177,229,57,#7136D9,63
+Rectus femoris,Right,lolm_02_01,108,141,36,#3D1D74,64
+Vastus,Left,lolm_03_01,157,229,57,#B5D936,65
+Vastus,Right,lolm_04_01,96,141,36,#60741D,66
+Long head of biceps femoris,Left,lolm_01_04,57,112,229,#366AD9,67
+Long head of biceps femoris,Right,lolm_02_04,36,68,141,#1D3874,68
+Short head of biceps femoris,Left,lolm_03_02,229,151,57,#36D980,69
+Short head of biceps femoris,Right,lolm_04_02,141,92,36,#1D7444,70
+Semimembranosus,Left,lolm_01_02,229,57,73,#71D936,71
+Semimembranosus,Right,lolm_02_02,141,36,44,#3D741D,72
+Semitendinosus,Left,lolm_01_03,229,57,131,#D9D136,73
+Semitendinosus,Right,lolm_02_03,141,36,81,#746F1D,74
+Fibularis longus,Left,lolm_09_01,108,57,229,#CA36D9,75
+Fibularis longus,Right,lolm_10_01,66,36,141,#6B1D74,76
+Fibularis brevis,Left,lolm_09_03,229,57,149,#36D9D9,77
+Fibularis brevis,Right,lolm_10_03,141,36,91,#1D7474,78
+Fibularis tertius,Left,lolm_09_04,57,229,189,#D96336,79
+Fibularis tertius,Right,lolm_10_04,36,141,116,#74341D,80
+Tibialis anterior,Left,lolm_07_01,57,229,82,#36C4D9,81
+Tibialis anterior,Right,lolm_08_01,36,141,51,#1D6774,82
+Tibialis posterior,Left,lolm_07_02,57,121,229,#3654D9,83
+Tibialis posterior,Right,lolm_08_02,36,73,141,#1D2C74,84
+Soleus,Left,lolm_09_02,116,57,229,#D9A636,85
+Soleus,Right,lolm_10_02,71,36,141,#74571D,86
+Gastrocnemius,Left,lolm_03_03,96,57,229,#9ED936,87
+Gastrocnemius,Right,lolm_04_03,58,36,141,#53741D,88

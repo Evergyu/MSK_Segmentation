@@ -1,0 +1,32 @@
+__pycache__/
+*.pyc
+results/
+*.out
+*.err
+.smoke_data/
+.smoke_ckpt/
+venv/
+.idea/
+.vscode/
+*.log
+_*.txt
+
+# model weights
+*.pth
+
+# dataset (downloaded from DataON — not committed), keep the empty folders
+*.zip
+/download/
+/dataset/
+class_info.csv
+/data/*
+!/data/.gitkeep
+/checkpoints/*
+!/checkpoints/.gitkeep
+
+# cluster-only experiment / slurm scripts (NOT part of the python package)
+/_*.py
+*.sbatch
+*.sh
+/Data/
+/Data_split/
