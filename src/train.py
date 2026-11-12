@@ -1,8 +1,10 @@
 """DDP training for the Lower-Limb Musculoskeletal CT Segmentation dataset.
 
 Dataset: "Musculoskeletal CT Segmentation Dataset of Lower Limbs for High-fidelity
-Human Digital Twin" (DataON, https://doi.org/10.22711/idr/1134).
-89 classes = 88 musculoskeletal structures (44 per limb x left/right) + background;
+Human Digital Twin" (Scientific Data, https://doi.org/10.1038/s41597-026-08630-0;
+data: DataON, https://doi.org/10.22711/idr/1472).
+89 classes = 88 side-specific labels (44 structures per limb: 31 bones + 13 muscles,
+x left/right) + background;
 multi-planar 2D CT slices (axial / coronal / sagittal) resized to 512x512.
 
 Launch (single node, uses all visible GPUs — e.g. 8):
@@ -13,7 +15,8 @@ Limit GPU count with --gpus N. Launching via torchrun also works:
 
 Dataset layout (auto-detected; masks are single-channel PNGs of class indices):
     data_root/
-    ├── train/images/*.png|jpg   train/masks/*.png   (subject-level split)
+    ├── train/images/*.png|jpg   train/masks/*.png   (subject-level split:
+    │                                                 38 train / 2 test cases)
     └── test/images/*.png|jpg    test/masks/*.png    (or val/; a flat
                                                       images/+masks/ is auto-split)
 
@@ -21,13 +24,14 @@ The paper benchmarks five smp architectures via --arch: unet, fpn, pspnet, manet
 upernet (UPerNet is the released checkpoint, the best performer). Setup follows the
 paper: Dice+CE loss (lambda=0.5), 512x512 input.
 
-Paper training config (arch=upernet, encoder=timm-efficientnet-b1, classes=89):
-    Adam lr=2e-4 betas=(0.9,0.999) weight_decay=1e-4
-    CosineAnnealingLR (eta_min=1e-6) after 5 warmup epochs, 100 epochs, batch 64
-    best checkpoint kept by test IoU (early stopping, patience 20, in the paper)
-Note: the paper's reported IoU/DSC/Prec/Rec are MACRO (per-class mean); its stored
-metrics dict labels them micro/macro/weighted. This script logs both foreground
-micro and macro each epoch and stores the full metrics dict in the checkpoint:
+Paper training config (Table 5; arch=upernet, encoder=timm-efficientnet-b1, classes=89):
+    Adam lr=2e-4 weight_decay=1e-4, CosineAnnealingLR (eta_min=1e-6) after
+    5 warmup epochs, 100 epochs, global batch 64 (8/GPU x 8 GPUs), seed 42
+    best checkpoint kept by test IoU
+Metrics: the paper reports IoU/DSC/Precision/Recall MICRO-averaged over all
+foreground labels (TP/FP/FN aggregated globally, background excluded); this is the
+'[fg]' metric used for model selection. Micro/macro/weighted values including
+background are also logged, and the full metrics dict is stored in the checkpoint:
     {epoch, model_state_dict, optimizer_state_dict, scheduler_state_dict,
      test_iou, metrics}
 """

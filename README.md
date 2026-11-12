@@ -1,13 +1,14 @@
 # MSK-Segmentation
-**Training & inference code for the Lower-Limb Musculoskeletal CT Segmentation dataset**
+**Official repository of "Musculoskeletal CT Segmentation Dataset of Lower Limbs for High-fidelity Human Digital Twin"**
+
+[![Paper](https://img.shields.io/badge/Paper-Scientific%20Data-blue)](https://doi.org/10.1038/s41597-026-08630-0)
+[![Dataset](https://img.shields.io/badge/Dataset-DataON-green)](https://doi.org/10.22711/idr/1472)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-yellow)](https://huggingface.co/evergyu2/MSK_segmentation)
 
 ## Overview
 This repository provides multi-GPU **training** and **inference/visualization** code for the
 lower-limb musculoskeletal CT segmentation dataset published in our paper. It reproduces the
 UPerNet benchmark using `segmentation_models_pytorch` and is compatible with the released checkpoint.
-
-- 🔗 **Dataset**: [DataON - doi:10.22711/idr/1134](https://doi.org/10.22711/idr/1134) (raw CT: [doi:10.22711/idr/1133](https://doi.org/10.22711/idr/1133))
-- 🔗 **Pretrained checkpoint**: [Hugging Face: evergyu/MSK_segmentation](https://huggingface.co/evergyu/MSK_segmentation)
 
 ## Environment & Dependencies
 This codebase has been tested in the following environment:
@@ -50,12 +51,12 @@ MSK_Segmentation/
 ```
 
 ## Dataset Preparation (for Training)
-The dataset is available on our **DataON** repository (login required). It contains 40 lower-limb
+The dataset is available on our **DataON** repository (CC BY 4.0). It contains 40 lower-limb
 cases (multi-planar 2D CT), **89 classes** (88 musculoskeletal structures + background), with a
 subject-level split of **38 train / 2 test** cases.
 
 ### 1. Download the Data
-Download the three files from [DataON](https://doi.org/10.22711/idr/1134) into a `download/` folder:
+Download the three files from [DataON](https://doi.org/10.22711/idr/1472) into a `download/` folder:
 `images.zip`, `labels.zip`, `class_info.csv`.
 
 ### 2. Arrange the Directories
@@ -104,7 +105,7 @@ IoU) and `last.pth` are written to `--output-dir` (default `checkpoints/`).
 ### 1. Download Pre-trained Weights
 Download `checkpoint.pth` from **Hugging Face**, or use your own trained checkpoint:
 ```bash
-python -c "from huggingface_hub import hf_hub_download; hf_hub_download('evergyu/MSK_segmentation','checkpoint.pth',local_dir='checkpoints')"
+python -c "from huggingface_hub import hf_hub_download; hf_hub_download('evergyu2/MSK_segmentation','checkpoint.pth',local_dir='checkpoints')"
 ```
 
 ### 2. Prepare Directories
@@ -128,3 +129,15 @@ python src/main.py
 For each image, a `<name>_visualization.png` (Original / Prediction / Overlay) is saved to `results/`.
 Prediction runs at a fixed 512×512 and is resized back to each image's native resolution. Paths are
 set by the constants at the top of `src/main.py`.
+
+## Citation
+```bibtex
+@article{lee2026musculoskeletal,
+  title   = {Musculoskeletal CT Segmentation Dataset of Lower Limbs for High-fidelity Human Digital Twin},
+  author  = {Lee, In-Gyu and Kim, Gi-Wan and Lee, Jae Yong and Shim, Hyoung Seop and Kwak, Dai-Soon and
+             Choi, Kwangnam and Son, Ji-Young and Han, Seung-Ho and Yang, Donghun},
+  journal = {Scientific Data},
+  year    = {2026},
+  doi     = {10.1038/s41597-026-08630-0}
+}
+```
